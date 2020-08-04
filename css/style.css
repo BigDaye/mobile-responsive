@@ -1,0 +1,151 @@
+html {
+    box-sizing: border-box
+   }
+   
+   /* The Universal Selector */
+   *, /* All elements*/
+   *::before, /* All ::before pseudo-elements */
+   *::after { /* All ::after pseudo-elements */
+    /* height & width will now include border & padding by default
+       but can be over-ridden as needed */
+    box-sizing: inherit;
+   }
+   
+   /* resets font size to be 62.5% of the user preference - 
+     in most browser configurations this will be 10px */
+   :root {
+    font-size: 62.5%
+   }
+   
+   body {
+    background-color: #FF9697;
+   /* Use a system font, if none are available use an available sans-sarif   font */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 3fr;
+    
+
+    
+   }
+
+   h3,   
+   header, 
+   main,
+   footer {
+        display: flex;
+        align-items: center;
+        grid-column: 3 / 5;
+        font-size: 25px;
+        background-color: #95B0B1;
+        margin: 0;
+
+   }
+
+   main {
+       grid-row: 3 / 6;
+   }
+
+    #pic {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       grid-column: 1 /3;
+       margin: 0;
+       
+       
+
+       
+   }
+   img{
+    border-radius: 50px;
+    height: 250px;
+   }
+
+   footer{
+    
+    grid-column: 3 / 5;
+    grid-row: 6 /7;
+
+}
+
+   #butt {
+       display: flex;
+       background-color: #E3EE83;
+       grid-column: 1 / 2;
+       justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        grid-row: 6 / 7;
+        
+   }
+
+   #und {
+       display: flex;
+       background-color: #00DDFF;
+        justify-content: center;
+        align-items: center;
+        grid-row: 6 /7;
+        font-size: 25px;
+        
+        
+   }
+   @media only screen and (max-width: 500px) {
+       body {
+        display: grid;
+        font-size: 2.4rem;
+        font-weight: bold;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 30px ;
+        grid-template-areas: 
+          "header"
+          "footer"
+          "content"
+          "side";
+   }
+
+   #pic {
+       grid-column: 1 / 5;
+       grid-row: 1 / 3;
+       
+        
+       
+   }
+
+img {
+    height: 75px;
+
+    
+}
+header, 
+main, 
+h3,
+footer {
+    display: flex;
+    justify-content: space-around;
+    grid-column: 1 / 5;
+}
+header{
+    grid-row: 4 / 5;
+
+}
+
+main {
+    visibility: hidden;
+}
+
+h3 {
+
+    grid-row: 1 / 4;
+   
+}
+footer {
+    grid-row: 5 / 6;
+
+}
+
+
+   }
